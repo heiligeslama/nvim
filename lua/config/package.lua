@@ -32,7 +32,7 @@ local plugins = {
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
-		config = setup("todo-comments"),
+		config = delegate("todo"),
 	},
 	{ "norcalli/nvim-colorizer.lua", config = setup("colorizer") },
 	{

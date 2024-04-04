@@ -1,5 +1,5 @@
 require("bluloco").setup({
-	style = "dark", -- "auto" | "dark" | "light"
+	style = "auto", -- "auto" | "dark" | "light"
 	transparent = false,
 	italics = false,
 	terminal = vim.fn.has("gui_running") == 1,

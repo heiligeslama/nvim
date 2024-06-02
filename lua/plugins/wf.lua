@@ -12,7 +12,7 @@ local function setup()
 	-- Register
 	vim.keymap.set(
 		"n",
-		"<Space>wr",
+		"<Leader>wr",
 		-- register(opts?: table) -> function
 		-- opts?: option
 		register(),
@@ -22,7 +22,7 @@ local function setup()
 	-- Bookmark
 	vim.keymap.set(
 		"n",
-		"<Space>wbo",
+		"<Leader>wbo",
 		-- bookmark(bookmark_dirs: table, opts?: table) -> function
 		-- bookmark_dirs: directory or file paths
 		-- opts?: option
@@ -36,7 +36,7 @@ local function setup()
 	-- Buffer
 	vim.keymap.set(
 		"n",
-		"<Space>wbu",
+		"<Leader>wbu",
 		-- buffer(opts?: table) -> function
 		-- opts?: option
 		buffer(),

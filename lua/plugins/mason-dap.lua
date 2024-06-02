@@ -3,6 +3,7 @@ return {
 	dependencies = {
 		"williamboman/mason.nvim",
 		"mfussenegger/nvim-dap",
+		"VonHeikemen/lsp-zero.nvim",
 	},
 	config = function()
 		require("mason-nvim-dap").setup({

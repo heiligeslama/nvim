@@ -7,21 +7,20 @@ local function setup()
 
 	require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
-	lsp.ensure_installed({
-		"rust_analyzer",
-		"clangd",
-		"lua_ls",
-		"pyright",
-	})
-
 	lsp.setup()
 
+	require("mason").setup()
 	require("mason-null-ls").setup({
 		ensure_installed = {
 			"buildifier",
 			"stylua",
 			"black",
 			"mypy",
+			"rust_analyzer",
+			"clangd",
+			"lua_ls",
+			"pyright",
+			"lua-language-server",
 		},
 		automatic_installation = true,
 		handlers = {},
@@ -46,7 +45,7 @@ end
 
 return {
 	"VonHeikemen/lsp-zero.nvim",
-	branch = "v2.x",
+	branch = "v3.x",
 	config = setup,
 	dependencies = {
 		{ "neovim/nvim-lspconfig" },

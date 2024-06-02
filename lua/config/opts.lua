@@ -15,3 +15,6 @@ vim.opt.cpoptions = "$"
 vim.opt.backup = false
 vim.opt.spell = true
 vim.opt.colorcolumn = "80"
+vim.g.wrap = true
+vim.g.linebreak = true
+vim.g.nolist = true

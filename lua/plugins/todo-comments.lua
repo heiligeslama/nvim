@@ -7,6 +7,9 @@ return {
 				pattern = [[.*<(KEYWORDS)\s*(\(.*\))?:]],
 				keyword = "bg",
 			},
+			search = {
+				pattern = [[\b(KEYWORDS)\s*(\(.*\))?:]],
+			},
 		})
 	end,
 }

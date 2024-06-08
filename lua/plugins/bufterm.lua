@@ -1,4 +1,6 @@
 return {
 	"boltlessengineer/bufterm.nvim",
-	config = true,
+	config = function()
+		require("bufterm").setup()
+	end,
 }

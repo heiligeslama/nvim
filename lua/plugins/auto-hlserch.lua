@@ -1,5 +1,7 @@
 return {
 	"asiryk/auto-hlsearch.nvim",
 	tag = "1.1.0",
-	config = true,
+	config = function()
+        require("auto-hlsearch").setup()
+    end,
 }

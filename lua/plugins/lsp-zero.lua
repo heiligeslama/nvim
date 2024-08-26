@@ -15,7 +15,7 @@ local function setup()
 			"rust_analyzer",
 			"clangd",
 			"lua_ls",
-			"pyright",
+			"basedpyright",
 			"gopls",
 		},
 		automatic_installation = true,

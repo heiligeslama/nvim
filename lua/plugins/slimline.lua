@@ -6,7 +6,16 @@ return {
 	},
 	config = true,
 	opts = {
+		spaces = {
+			components = "",
+			left = "",
+			right = "",
+		},
 		sep = {
+			hide = {
+				first = true,
+				last = true,
+			},
 			left = "◢",
 			right = "◤",
 		},

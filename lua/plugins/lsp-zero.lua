@@ -1,13 +1,17 @@
 local function setup()
-	local lsp = require("lsp-zero").preset()
+	local lsp = require("lsp-zero")
 
-	lsp.on_attach(function(_, bufnr)
+	local attach = function(_, bufnr)
 		lsp.default_keymaps({ buffer = bufnr })
-	end)
+	end
 
-	require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
+	lsp.extend_lspconfig({
+		sign_text = true,
+		lsp_attach = attach,
+	})
 
 	lsp.setup()
+	require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
 	require("mason").setup()
 	require("mason-lspconfig").setup({
@@ -55,7 +59,7 @@ end
 
 return {
 	"VonHeikemen/lsp-zero.nvim",
-	branch = "v3.x",
+	branch = "v4.x",
 	config = setup,
 	dependencies = {
 		{ "neovim/nvim-lspconfig" },

@@ -8,6 +8,7 @@ local function setup()
 	lsp.extend_lspconfig({
 		sign_text = true,
 		lsp_attach = attach,
+		capabilities = require("cmp_nvim_lsp").default_capabilities(),
 	})
 
 	lsp.setup()
@@ -51,9 +52,9 @@ local function setup()
 			{ name = "nvim_lsp" },
 			{ name = "nvim_lua" },
 		},
-		mapping = {
+		mapping = cmp.mapping.preset.insert({
 			["<CR>"] = cmp.mapping.confirm({ select = true }),
-		},
+		}),
 	})
 end
 

@@ -90,3 +90,11 @@ end, { desc = "Debugger Toggle Breakpoint" })
 vim.keymap.set("n", "<Leader>dB", function()
 	require("dap").set_breakpoint()
 end, { desc = "Debugger Set Breakpoint" })
+
+vim.keymap.set("n", "gl", function()
+	vim.diagnostic.open_float({ bufnr = 0, scope = "line" })
+end, {
+	remap = true,
+	silent = true,
+	desc = "Show Diagnostics",
+})

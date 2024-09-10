@@ -18,3 +18,4 @@ vim.opt.colorcolumn = "80"
 vim.g.wrap = true
 vim.g.linebreak = true
 vim.g.nolist = true
+vim.opt.laststatus = 3

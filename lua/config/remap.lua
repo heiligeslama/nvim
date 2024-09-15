@@ -98,3 +98,9 @@ end, {
 	silent = true,
 	desc = "Show Diagnostics",
 })
+
+vim.keymap.set("n", "ga", vim.lsp.buf.code_action, {
+	remap = true,
+	silent = true,
+	desc = "Run code actions",
+})

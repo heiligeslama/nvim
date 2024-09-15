@@ -2,7 +2,7 @@ vim.g.mapleader = ","
 
 vim.opt.number = true
 vim.opt.termguicolors = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 vim.opt.so = 16
 vim.opt.smartindent = true
 vim.opt.tabstop = 4

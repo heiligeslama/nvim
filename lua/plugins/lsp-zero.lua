@@ -12,7 +12,6 @@ local function setup()
 	})
 
 	lsp.setup()
-	require("lspconfig").lua_ls.setup(lsp.nvim_lua_ls())
 
 	require("mason").setup()
 	require("mason-lspconfig").setup({
@@ -26,7 +25,11 @@ local function setup()
 		automatic_installation = true,
 		handlers = {
 			function(server_name)
-				require("lspconfig")[server_name].setup({})
+				if server_name == "lua_ls" then
+					require("lspconfig")[server_name].setup(lsp.nvim_lua_ls())
+				else
+					require("lspconfig")[server_name].setup({})
+				end
 			end,
 		},
 	})

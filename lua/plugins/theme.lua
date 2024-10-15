@@ -1,12 +1,20 @@
 return {
-	"rose-pine/neovim",
-	name = "rose-pine",
+	"rebelot/kanagawa.nvim",
+	name = "kanagawa",
 	lazy = false,
 	priority = 1000,
-	config = function()
-		require("rose-pine").setup({
-			dark_variant = "main",
-		})
-		vim.cmd.colorscheme("rose-pine")
+	config = {
+		colors = {
+			theme = {
+				all = {
+					ui = {
+						bg_gutter = "none",
+					},
+				},
+			},
+		},
+	},
+	init = function()
+		vim.cmd.colorscheme("kanagawa")
 	end,
 }

@@ -16,8 +16,8 @@ return {
 				first = true,
 				last = true,
 			},
-			left = "◢",
-			right = "◤",
+			left = "",
+			right = "",
 		},
 	},
 }

@@ -23,8 +23,11 @@ return {
             },
             signature = { enabled = true },
             completion = {
+                accept = {
+                    create_undo_point = true
+                },
                 ghost_text = {
-                    enabled = true
+                    enabled = false
                 }
             }
         },

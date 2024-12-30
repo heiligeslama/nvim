@@ -48,6 +48,7 @@ return {
                 rust_analyzer = {},
                 clangd = {},
                 basedpyright = {},
+                zls = {},
             },
         },
         config = function(_, opts)
@@ -59,6 +60,7 @@ return {
                     "lua_ls",
                     "basedpyright",
                     "gopls",
+                    "zls",
                 },
                 automatic_installation = true,
             })

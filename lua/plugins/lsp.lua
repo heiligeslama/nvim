@@ -49,6 +49,7 @@ return {
                 clangd = {},
                 basedpyright = {},
                 zls = {},
+                jsonls = {},
             },
         },
         config = function(_, opts)
@@ -61,6 +62,7 @@ return {
                     "basedpyright",
                     "gopls",
                     "zls",
+                    "jsonls",
                 },
                 automatic_installation = true,
             })

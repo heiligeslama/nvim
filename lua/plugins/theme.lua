@@ -3,7 +3,7 @@ return {
 	name = "kanagawa",
 	lazy = false,
 	priority = 1000,
-	config = {
+	opts = {
 		colors = {
 			theme = {
 				all = {

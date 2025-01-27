@@ -40,7 +40,17 @@ return {
         dependencies = {
             "saghen/blink.cmp",
             "williamboman/mason.nvim",
-            "williamboman/mason-lspconfig.nvim"
+            "williamboman/mason-lspconfig.nvim",
+            {
+                "folke/lazydev.nvim",
+                ft = "lua",
+                opts = {
+                    library = {
+                        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+                    }
+                }
+            }
+
         },
 
         opts = {

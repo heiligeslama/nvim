@@ -23,14 +23,8 @@ return {
             },
             signature = {
                 enabled = true,
-                window = {
-                    treesitter_highlighting = false
-                }
             },
             completion = {
-                documentation = {
-                    treesitter_highlighting = false
-                },
                 accept = {
                     create_undo_point = true
                 },

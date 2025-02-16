@@ -8,9 +8,12 @@ return {
         opts = {
             keymap = {
                 preset = "enter",
-                cmdline = {
+            },
+
+            cmdline = {
+                keymap = {
                     preset = "super-tab"
-                }
+                },
             },
 
             appearance = {

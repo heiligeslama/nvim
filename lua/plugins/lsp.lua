@@ -88,6 +88,7 @@ return {
                 config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
                 lspconfig[server].setup(config)
             end
+            vim.keymap.set("n", "gR", vim.lsp.buf.references, { desc = "Search symbol references" })
         end,
     },
 }

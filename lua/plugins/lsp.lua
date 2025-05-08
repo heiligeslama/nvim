@@ -108,11 +108,7 @@ return {
                 },
                 automatic_installation = true,
             })
-            local lspconfig = require("lspconfig")
-            for server, config in pairs(opts.servers) do
-                config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
-                lspconfig[server].setup(config)
-            end
+            require("lspconfig")
             vim.keymap.set("n", "gR", vim.lsp.buf.references, { desc = "Search symbol references" })
         end,
     },

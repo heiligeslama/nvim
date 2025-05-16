@@ -81,18 +81,6 @@ return {
 
         },
 
-        opts = {
-            servers = {
-                lua_ls = {},
-                gopls = {},
-                rust_analyzer = {},
-                clangd = {},
-                zls = {},
-                jsonls = {},
-                ruff = {},
-                pylsp = {},
-            },
-        },
         config = function(_, opts)
             require("mason").setup()
             require("mason-lspconfig").setup({
@@ -106,9 +94,17 @@ return {
                     "ruff",
                     "pylsp",
                 },
+                automatic_enable = true,
                 automatic_installation = true,
             })
             require("lspconfig")
+            vim.lsp.config("ruff", {
+                init_options = {
+                    settings = {
+                        lineLength = 80
+                    }
+                }
+            })
             vim.keymap.set("n", "gR", vim.lsp.buf.references, { desc = "Search symbol references" })
         end,
     },

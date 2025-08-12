@@ -1,20 +1,8 @@
 return {
-	"rebelot/kanagawa.nvim",
-	name = "kanagawa",
+	"vague2k/vague.nvim",
 	lazy = false,
 	priority = 1000,
-	opts = {
-		colors = {
-			theme = {
-				all = {
-					ui = {
-						bg_gutter = "none",
-					},
-				},
-			},
-		},
-	},
 	init = function()
-		vim.cmd.colorscheme("kanagawa")
+		vim.cmd.colorscheme("vague")
 	end,
 }

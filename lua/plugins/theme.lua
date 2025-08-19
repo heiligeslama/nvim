@@ -1,8 +1,8 @@
 return {
-	"vague2k/vague.nvim",
+	"EdenEast/nightfox.nvim",
 	lazy = false,
 	priority = 1000,
 	init = function()
-		vim.cmd.colorscheme("vague")
+		vim.cmd.colorscheme("carbonfox")
 	end,
 }

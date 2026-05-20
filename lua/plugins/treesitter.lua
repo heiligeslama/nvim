@@ -1,36 +1,39 @@
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-        branch = "master",
-		config = function()
-			require("nvim-treesitter.configs").setup({
-				ensure_installed = {
-					"c",
-					"cpp",
-					"rust",
-					"lua",
-					"vim",
-					"vimdoc",
-					"query",
-					"python",
-					"diff",
-					"git_rebase",
-				},
-				sync_install = false,
-				auto_install = true,
-				highlight = {
-					enable = true,
-					additional_vim_regex_highlighting = true,
-					-- disable = { "gitcommit", "diff" },
-				},
-			})
-		end,
-		build = function()
-			pcall(vim.cmd.TSUpdate)
-		end,
-	},
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
-	},
+    {
+        "nvim-treesitter/nvim-treesitter",
+        branch = "main",
+        config = function()
+            local pattern = {
+                "c",
+                "cpp",
+                "rust",
+                "lua",
+                "vim",
+                "vimdoc",
+                "query",
+                "python",
+                "diff",
+                "git_rebase",
+                "go",
+                "gomod",
+                "gosum",
+                "gowork"
+            }
+            require("nvim-treesitter").install(pattern)
+            vim.api.nvim_create_autocmd('FileType', {
+                pattern = pattern,
+                callback = function(ev)
+                    require("nvim-treesitter").install({ ev.match })
+                    vim.treesitter.start()
+                end,
+            })
+        end,
+        build = function()
+            pcall(vim.cmd.TSUpdate)
+        end,
+    },
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+    },
 }

@@ -46,7 +46,7 @@ end
 
 return {
     "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
+    version = "*",
     config = setup,
     dependencies = {
         "nvim-lua/plenary.nvim",

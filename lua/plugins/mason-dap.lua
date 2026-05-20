@@ -6,7 +6,7 @@ return {
 	},
 	config = function()
 		require("mason-nvim-dap").setup({
-			ensure_installed = { "python", "codelldb" },
+			ensure_installed = { "python" },
 		})
 	end,
 }

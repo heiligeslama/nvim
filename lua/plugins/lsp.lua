@@ -93,7 +93,6 @@ return {
                     "jsonls",
                     "ruff",
                     "pylsp",
-                    "ty",
                 },
                 automatic_enable = true,
                 automatic_installation = true,

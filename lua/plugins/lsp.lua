@@ -90,7 +90,6 @@ return {
                     "lua_ls",
                     "gopls",
                     "zls",
-                    "jsonls",
                     "ruff",
                     "pylsp",
                 },
